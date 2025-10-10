@@ -3,11 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expensive Adivisor</title>
+    <title>Expense Advisor</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilizando o menu */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed; /* fixa no topo */
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        /* Conteúdo principal com margem para o menu */
+        .main-content {
+            padding: 80px 20px 20px 20px; /* margem superior para não ficar atrás do menu */
+        }
+
+        .title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    
-    <h1 class="title">Expensive Adivisor</h1>
-    <p>Welcome to my Expensive Adivisor where I will show how to better control your expenses</p>
+
+    <!-- Menu superior -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+        <h1 class="title">Expense Advisor</h1>
+        <p>Welcome to my Expense Advisor where I will show how to better control your expenses.</p>
+    </div>
+
 </body>
 </html>
