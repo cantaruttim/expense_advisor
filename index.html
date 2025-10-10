@@ -14,39 +14,83 @@
 
         body {
             font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #ffffff;
+            color: #000000;
         }
 
         /* Estilizando o menu */
         .navbar {
             background-color: #333;
             overflow: hidden;
-            position: fixed; /* fixa no topo */
+            position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
         }
 
         .navbar a {
-            float: left;
-            display: block;
             color: #fff;
-            text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            display: inline-block;
         }
 
         .navbar a:hover {
             background-color: #575757;
         }
 
-        /* Conteúdo principal com margem para o menu */
+        /* Botão de tema */
+        .theme-toggle {
+            background-color: #444;
+            border: none;
+            color: white;
+            padding: 10px 16px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+            margin: 8px 0;
+        }
+
+        .theme-toggle:hover {
+            background-color: #666;
+        }
+
+        /* Conteúdo principal */
         .main-content {
-            padding: 80px 20px 20px 20px; /* margem superior para não ficar atrás do menu */
+            padding: 80px 20px 20px 20px;
         }
 
         .title {
             font-size: 2em;
             margin-bottom: 10px;
+        }
+
+        /* Tema escuro */
+        body.dark-theme {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        body.dark-theme .navbar {
+            background-color: #1e1e1e;
+        }
+
+        body.dark-theme .navbar a:hover {
+            background-color: #333;
+        }
+
+        body.dark-theme .theme-toggle {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+
+        body.dark-theme .theme-toggle:hover {
+            background-color: #555;
         }
     </style>
 </head>
@@ -54,10 +98,13 @@
 
     <!-- Menu superior -->
     <div class="navbar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
     </div>
 
     <!-- Conteúdo principal -->
@@ -65,6 +112,22 @@
         <h1 class="title">Expense Advisor</h1>
         <p>Welcome to my Expense Advisor where I will show how to better control your expenses.</p>
     </div>
+
+    <!-- Script para alternar tema -->
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const button = document.querySelector('.theme-toggle');
+
+            body.classList.toggle('dark-theme');
+
+            if (body.classList.contains('dark-theme')) {
+                button.textContent = 'Light Mode';
+            } else {
+                button.textContent = 'Dark Mode';
+            }
+        }
+    </script>
 
 </body>
 </html>
