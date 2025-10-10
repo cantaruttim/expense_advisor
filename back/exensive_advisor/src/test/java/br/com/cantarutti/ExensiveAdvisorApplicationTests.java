@@ -1,4 +1,4 @@
-package br.com.cantarutti.exensive_advisor;
+package br.com.cantarutti;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

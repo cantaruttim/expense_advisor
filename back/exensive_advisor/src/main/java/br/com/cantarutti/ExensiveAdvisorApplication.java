@@ -1,4 +1,4 @@
-package br.com.cantarutti.exensive_advisor;
+package br.com.cantarutti;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
