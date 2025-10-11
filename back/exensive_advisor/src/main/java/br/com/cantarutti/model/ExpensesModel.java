@@ -4,10 +4,19 @@ import java.util.Objects;
 
 public class ExpensesModel {
 
+    private Long id;
     private String owner;
     private String card ;
     private String anomes;
     private Double value;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getOwner() {
         return owner;
@@ -41,15 +50,17 @@ public class ExpensesModel {
         this.anomes = anomes;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof ExpensesModel that)) return false;
-        return Objects.equals(owner, that.owner) && Objects.equals(card, that.card) && Objects.equals(anomes, that.anomes) && Objects.equals(value, that.value);
+        return Objects.equals(id, that.id) && Objects.equals(owner, that.owner) && Objects.equals(card, that.card) && Objects.equals(anomes, that.anomes) && Objects.equals(value, that.value);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(owner, card, anomes, value);
+        return Objects.hash(id, owner, card, anomes, value);
     }
+
 }
