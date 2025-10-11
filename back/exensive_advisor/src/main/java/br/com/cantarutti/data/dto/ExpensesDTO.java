@@ -13,6 +13,6 @@ public class ExpensesDTO {
     private String anomes;
     private Double value;
 
-
+    public ExpensesDTO() {}
 
 }
