@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ExcelToMongoDB {
     public static void main(String[] args) {
-        String excelFilePath = "caminho/para/arquivo.xlsx"; // Ajuste o caminho do arquivo
+        String excelFilePath = "/Users/matheuscantarutti/Desktop/Personal/Finance/calc_financeira/dados/expenses_java_version.xlsx";
         String mongoUri = "mongodb://localhost:27017";
         String databaseName = "expensive_adivisor";
         String collectionName = "expenses";
@@ -30,7 +30,7 @@ public class ExcelToMongoDB {
             MongoDatabase database = mongoClient.getDatabase(databaseName);
             MongoCollection<Document> collection = database.getCollection(collectionName);
 
-            Sheet sheet = workbook.getSheetAt(0);
+            Sheet sheet = workbook.getSheetAt(0); // sheet at position 0
             Iterator<Row> rowIterator = sheet.iterator();
 
             List<String> headers = new ArrayList<>();
