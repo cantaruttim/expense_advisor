@@ -9,13 +9,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.*;
 
-public class ExpensesExcelToMongoDB {
+public class InstallmentsExcelToMongoDB {
 
     public static void main(String[] args) {
-        String excelFilePath = "/Users/matheuscantarutti/Desktop/Personal/Finance/calc_financeira/dados/expenses_java_version.xlsx";
+        String excelFilePath = "/Users/matheuscantarutti/Desktop/Personal/Finance/calc_financeira/dados/parcelado.xlsx";
         String mongoUri = "mongodb://localhost:27017";
         String databaseName = "expensive_adivisor";
-        String collectionName = "expenses";
+        String collectionName = "installments";
 
         try (
                 MongoClient mongoClient = MongoClients.create(mongoUri);
