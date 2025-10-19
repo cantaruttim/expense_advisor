@@ -4,6 +4,8 @@ import java.util.Objects;
 
 public class ExpensesModel {
 
+    // Represents the amount expended on a month
+
     private Long id;
     private String owner;
     private String card ;
