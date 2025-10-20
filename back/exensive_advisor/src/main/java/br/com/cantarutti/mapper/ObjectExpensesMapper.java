@@ -16,4 +16,18 @@ public class ObjectExpensesMapper {
         dto.setValue(model.getValue());
         return dto;
     }
+
+    // expeses dto to expenses dto
+    public static ExpensesModel ExpensesDTOToModel(ExpensesDTO dto) {
+        ExpensesModel model = new ExpensesModel();
+
+        model.setId(dto.getId());
+        model.setOwner(dto.getOwner());
+        model.setCard(dto.getCard());
+        model.setAnomes(dto.getAnomes());
+        model.setValue(dto.getValue());
+        return model;
+    }
+
+
 }
