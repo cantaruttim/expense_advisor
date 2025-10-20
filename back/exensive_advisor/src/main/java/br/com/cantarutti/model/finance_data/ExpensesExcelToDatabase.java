@@ -15,7 +15,11 @@ public class ExpensesExcelToDatabase {
                     "expensive_adivisor",
                     "expenses"
             );
-            // case "postgres" -> repository = new PostgresExpensesRepository();
+            case "postgres" -> repository = new PostgresExpensesRepository(
+                "jdbc:postgresql://localhost:5432/expensive_adivisor",
+                "usuario",
+                "senha"
+            );
             default -> throw new IllegalArgumentException("Tipo de banco desconhecido: " + databaseType);
         }
 
