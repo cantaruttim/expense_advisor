@@ -6,7 +6,7 @@ import java.util.List;
 public interface DatabaseManager extends AutoCloseable {
 
     void connect();
-    void insertDocument(List<Document> documents);
+    void insertDocuments(List<Document> documents);
 
     @Override
     void close();
