@@ -9,13 +9,13 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
         </processorPath>
-        <module name="exensive_advisor" />
+        <module name="expensive_advisor" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="exensive_advisor" options="-parameters" />
+      <module name="expensive_advisor" options="-parameters" />
     </option>
   </component>
 </project>
