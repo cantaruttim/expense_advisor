@@ -46,6 +46,12 @@
              <artifactId>postgresql</artifactId>
              <version>42.6.0</version> <!-- ou versão mais recente -->
        </dependency>
+       <!-- Spring Data MySQL -->
+       <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+       </dependency>
 
 
         <!-- Apache POI para leitura de arquivos Excel -->
