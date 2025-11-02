@@ -24,9 +24,9 @@ public class MySQLDBManager implements DatabaseManager {
     public void connect() {
         try {
             connection = DriverManager.getConnection(url, user, password);
-            System.out.println("✅ Conectado ao MySQL!");
+            System.out.println("✅ Connecting to MySQL!");
         } catch (SQLException e) {
-            throw new RuntimeException("Erro ao conectar ao MySQL", e);
+            throw new RuntimeException("Error while connecting to MySQL", e);
         }
     }
 
