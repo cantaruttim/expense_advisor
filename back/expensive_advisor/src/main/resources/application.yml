@@ -1,0 +1,21 @@
+app:
+  database:
+    # Choose an active database: mongodb | postgresql | mysql
+    active: mysql
+
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: expensive_adivisor
+      collection: installments
+
+    postgresql:
+      url: jdbc:postgresql://localhost:5432/expensive_adivisor
+      user: postgres
+      password: 12102021
+      table: installments
+
+    mysql:
+      url: jdbc:mysql://localhost:3306/expensive_adivisor
+      user: root
+      password: 12102021
+      table: installments
