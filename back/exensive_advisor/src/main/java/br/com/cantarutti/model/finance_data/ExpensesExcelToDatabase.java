@@ -9,7 +9,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.*;
 
-public class ExpensesExcelToMongoDB {
+public class ExpensesExcelToDatabase {
 
     public static void main(String[] args) {
         String excelFilePath = "/Users/matheuscantarutti/Desktop/Personal/Finance/calc_financeira/dados/expenses_java_version.xlsx";
